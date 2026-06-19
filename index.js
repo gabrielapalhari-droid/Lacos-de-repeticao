@@ -26,7 +26,27 @@ let notaSete = notas.filter(notas => notas >=7);
 
 //Temperatura 
 
-let temperI = 17
-let temperF = 25
-  for() 
+
+//Loja Carros 
+//Total vendido ao ano 
+const totalVendas = [200000, 27000, 130000, 150000, 65000, 100000, 30000, 19000, 87000, 310000, 45000, 500000];
+let Anual = 0;
+for(let i = 0; i < totalVendas.length; i++){
+  Anual += totalVendas[i];};
+  //console.log('Valor Anual:', Anual);
+
+//Media Mensal
+let Mensal = 0;
+for(let i = 0; i < totalVendas.length; i++){
+  Mensal += totalVendas[i];};
+
+let MediaCarros = Mensal / totalVendas.length;
+//console.log('O valor Mensal é:', MediaCarros);
+
+
+//Maior Venda
+let MaiorVenda = Math.max(...totalVendas);
+console.log('Maior venda é:', MaiorVenda);
+
+
 
