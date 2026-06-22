@@ -25,6 +25,8 @@ let notaSete = notas.filter(notas => notas >=7);
 //console.log(notaSete);
 
 //Temperatura 
+let TempI = 15 
+let TempF = 23
 
 
 //Loja Carros 
@@ -46,7 +48,19 @@ let MediaCarros = Mensal / totalVendas.length;
 
 //Maior Venda
 let MaiorVenda = Math.max(...totalVendas);
-console.log('Maior venda é:', MaiorVenda);
+//console.log('Maior venda é:', MaiorVenda);
+
+
+//Menor venda 
+let MenorVenda = Math.min(...totalVendas);
+//console.log('A menor venda é:', MenorVenda);
+
+//Caixa eletrônico 
+let saldo = 2000
+
+
+//Senha 
+
 
 
 
