@@ -57,34 +57,13 @@ let MenorVenda = Math.min(...totalVendas);
 
 //Caixa eletrônico 
 let saldo = 2000;
-let opcao = 0;
-
-while(opcao !== '4'){
-  opcao = prompt('Seu saldo atual é R$:', + saldo + "\n1. Saldo\n2. Sacar\n3. Depositar\n4. Sair");
+console.log('Seu saldo atual é: R$', saldo);
+do {
+  let retirada = Number(prompt.question('Digite a quantia que deseja sacar'));
+  if (retirada < saldo)[
+  let 
+  ]
 }
-if (opcao === 1) {
-  alert("Seu saldo é: R$ " + saldo);
-} 
-else if (opcao === "2") {
-  let saque = parseFloat(prompt("Valor do saque:"));
-  
-  // Regra: não permite saque maior que o saldo
-  if (saque > saldo) {
-      alert("Saldo insuficiente!");
-  } else {
-      saldo = saldo - saque; // Atualiza o saldo
-      alert("Saque realizado!");
-  }
-} 
-else if (opcao === "3") {
-  let deposito = parseFloat(prompt("Valor do depósito:"));
-  saldo = saldo + deposito; // Atualiza o saldo
-  alert("Depósito realizado!");
-}
-alert("Programa encerrado.");
-console.log("=== Programa encerrado ===")
-//Senha 
-
 
 
 
