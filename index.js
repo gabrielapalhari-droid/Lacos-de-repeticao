@@ -25,9 +25,15 @@ let notaSete = notas.filter(notas => notas >=7);
 //console.log(notaSete);
 
 //Temperatura 
-let TempI = 15 
-let TempF = 23
+let tempInicial = 8; 
+let tempFinal = 17;
 
+//console.log("Celsius -> Fahrenheit");
+
+for (let c = tempInicial; c <= tempFinal; c++) {
+    let f = (c * 9/5) + 32;
+    //console.log(`${c}°C equivale a ${f}°F`);
+}
 
 //Loja Carros 
 //Total vendido ao ano 
@@ -57,13 +63,4 @@ let MenorVenda = Math.min(...totalVendas);
 
 //Caixa eletrônico 
 let saldo = 2000;
-console.log('Seu saldo atual é: R$', saldo);
-do {
-  let retirada = Number(prompt.question('Digite a quantia que deseja sacar'));
-  if (retirada < saldo)[
-  let 
-  ]
-}
-
-
-
+let opcao = 0;
