@@ -32,7 +32,7 @@ let tempFinal = 17;
 
 for (let c = tempInicial; c <= tempFinal; c++) {
     let f = (c * 9/5) + 32;
-    //console.log(`${c}°C equivale a ${f}°F`);
+  //console.log(`${c}°C equivale a ${f}°F`);
 }
 
 //Loja Carros 
@@ -62,5 +62,21 @@ let MenorVenda = Math.min(...totalVendas);
 //console.log('A menor venda é:', MenorVenda);
 
 //Caixa eletrônico 
+const readline = require('readline-sync');
+function PuxarSaldo() {
 let saldo = 2000;
-let opcao = 0;
+//console.log('Seu saldo atual é de 2000');
+  do {
+let retirar = Number(readline.question('Escolha uma quantia para sacar: '));
+    if (retirar < saldo) {
+    let SaldoAtt = saldo -= retirar;
+    //console.log('Seu saldo é de', + SaldoAtt);
+    return;
+    } else {
+    //console.log('Quantia insuficiente, escolha outro valor');
+    continue;
+    }
+  }
+  while(true);
+};
+//console.log(PuxarSaldo());
