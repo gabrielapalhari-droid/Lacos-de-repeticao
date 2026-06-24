@@ -25,15 +25,14 @@ let notaSete = notas.filter(notas => notas >=7);
 //console.log(notaSete);
 
 //Temperatura 
-let tempInicial = 8; 
-let tempFinal = 17;
+/* const readline = require('readline-sync');
+let inicio = Number(readline.question('Valor inicial: '));
+let final = Number(readline.question('Valor final: '));
+let fInicio = (inicio * 9 / 5) + 32;
+let fFinal = (final * 9 / 5) + 32; */
 
-//console.log("Celsius -> Fahrenheit");
-
-for (let c = tempInicial; c <= tempFinal; c++) {
-    let f = (c * 9/5) + 32;
-  //console.log(`${c}°C equivale a ${f}°F`);
-}
+//console.log(`${inicio}°C equivale a ${fInicio.toFixed(2)}°F`);
+//console.log(`${final}°C equivale a ${fFinal.toFixed(2)}°F`);
 
 //Loja Carros 
 //Total vendido ao ano 
@@ -61,7 +60,7 @@ let MaiorVenda = Math.max(...totalVendas);
 let MenorVenda = Math.min(...totalVendas);
 //console.log('A menor venda é:', MenorVenda);
 
-//Caixa eletrônico 
+/* //Caixa eletrônico 
 const readline = require('readline-sync');
 function PuxarSaldo() {
 let saldo = 2000;
@@ -79,4 +78,88 @@ let retirar = Number(readline.question('Escolha uma quantia para sacar: '));
   }
   while(true);
 };
-//console.log(PuxarSaldo());
+//console.log(PuxarSaldo()); */
+
+//Produtos Fim 
+/* const readline = require('readline-sync'); 
+
+let cadastrados = 0, totalEstoque = 0, maiorQtd = 0, maisPreenchido = "";
+
+while (true) {
+  
+    let nome = readline.question("Produto (ou 'FIM' para sair): ");
+    
+    if (!nome || nome.toUpperCase() === "FIM") break;
+
+    let qtd = +readline.question(`Quantidade de ${nome}: `);
+
+    cadastrados++;
+    totalEstoque += qtd;
+
+    if (qtd > maiorQtd) {
+        maiorQtd = qtd;
+        maisPreenchido = nome;
+    }
+}
+
+console.log(`\nProdutos cadastrados: ${cadastrados}`);
+console.log(`Maior quantidade: ${maisPreenchido} (${maiorQtd} un)`);
+console.log(`Total no estoque: ${totalEstoque}`); */
+
+//Senha 
+/* const readline = require('readline-sync');
+
+function VerifSenha() {
+  const senhaCorreta = 1234;
+  let tentativa = 0;
+  let statusSenha = "F"
+
+  do {
+    tentativa = tentativa + 1;
+    let n1 = Number(readline.question('Digite uma senha: '));
+
+    if(n1 === senhaCorreta){
+      console.log("Senha Correta!");
+      statusSenha = "T";
+    } 
+    else{
+      console.log('Senha incorreta, tente nomavente');
+      statusSenha = "F";
+    }
+
+    if(tentativa >= 3){
+      return 'Máximo de tentativas atingido';
+    }
+
+  }while(statusSenha === "F");
+
+  return "Verificado senha!"
+};
+
+console.log(VerifSenha());
+ */
+
+
+//Cadastro de produtos 
+let cadastrados = 0, somaPrecos = 0, precoCaro = 0, precoBarato = Infinity;
+let produtoCaro = "", produtoBarato = "", resposta;
+
+do {
+    let nome = prompt("Nome do produto:");
+    let preco = +prompt(`Preço de ${nome}:`);
+
+    cadastrados++;
+    somaPrecos += preco;
+
+    if (preco > precoCaro) { precoCaro = preco; produtoCaro = nome; }
+    if (preco < precoBarato) { precoBarato = preco; produtoBarato = nome; }
+
+    resposta = prompt("Deseja cadastrar outro produto? (S/N)").toUpperCase();
+} while (resposta === "S");
+
+let media = cadastrados > 0 ? (somaPrecos / cadastrados).toFixed(2) : 0;
+
+console.log(`\nProdutos cadastrados: ${cadastrados}`);
+console.log(`Valor médio: R$ ${media}`);
+console.log(`Mais caro: ${produtoCaro} (R$ ${precoCaro})`);
+console.log(`Mais barato: ${produtoBarato} (R$ ${precoBarato})`);
