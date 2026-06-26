@@ -141,25 +141,108 @@ console.log(VerifSenha());
 
 
 //Cadastro de produtos 
-let cadastrados = 0, somaPrecos = 0, precoCaro = 0, precoBarato = Infinity;
-let produtoCaro = "", produtoBarato = "", resposta;
+/* const readline = require('readline-sync');
 
-do {
-    let nome = prompt("Nome do produto:");
-    let preco = +prompt(`Preço de ${nome}:`);
+function cadastrarProdutos() {
+    const produtos = [];
+    let continuar = "S";
 
-    cadastrados++;
-    somaPrecos += preco;
+    // Loop de cadastro
+    do {
+        let nome = readline.question('Digite o nome do produto: ');
+        let preco = Number(readline.question(`Digite o preco de ${nome}: `));
 
-    if (preco > precoCaro) { precoCaro = preco; produtoCaro = nome; }
-    if (preco < precoBarato) { precoBarato = preco; produtoBarato = nome; }
+        // Validação simples de preço
+        if (!isNaN(preco) && preco >= 0) {
+            produtos.push({ nome: nome, preco: preco });
+        } else {
+            console.log('⚠️ Preco invalido! Produto nao cadastrado.');
+        }
 
-    resposta = prompt("Deseja cadastrar outro produto? (S/N)").toUpperCase();
-} while (resposta === "S");
+        continuar = readline.question('Deseja cadastrar outro produto? (S/N): ').toUpperCase();
+        console.log(''); 
 
-let media = cadastrados > 0 ? (somaPrecos / cadastrados).toFixed(2) : 0;
+    } while (continuar === "S");
 
-console.log(`\nProdutos cadastrados: ${cadastrados}`);
-console.log(`Valor médio: R$ ${media}`);
-console.log(`Mais caro: ${produtoCaro} (R$ ${precoCaro})`);
-console.log(`Mais barato: ${produtoBarato} (R$ ${precoBarato})`);
+    // Processamento e exibição dos resultados
+    if (produtos.length > 0) {
+        let total = 0;
+        let maisCaro = produtos[0];
+        let maisBarato = produtos[0];
+
+        // Loop simples para as estatísticas
+        for (let i = 0; i < produtos.length; i++) {
+            total += produtos[i].preco;
+
+            if (produtos[i].preco > maisCaro.preco) maisCaro = produtos[i];
+            if (produtos[i].preco < maisBarato.preco) maisBarato = produtos[i];
+        }
+
+        let media = total / produtos.length;
+
+        console.log('--- RESUMO ---');
+        console.log(`Quantidade de produtos: ${produtos.length}`);
+        console.log(`Valor medio: R$ ${media.toFixed(2)}`);
+        console.log(`Mais caro: ${maisCaro.nome} (R$ ${maisCaro.preco.toFixed(2)})`);
+        console.log(`Mais barato: ${maisBarato.nome} (R$ ${maisBarato.preco.toFixed(2)})`);
+    } else {
+        console.log('Nenhum produto cadastrado.');
+    }
+
+    return "Sistema finalizado!";
+}
+
+console.log(cadastrarProdutos()); */
+
+//Voltas 
+/* const readline = require('readline-sync');
+
+function registrarVoltas() {
+    const voltas = [];
+    let continuar = "S";
+
+    // Loop de registro
+    do {
+        let tempo = Number(readline.question('Digite o tempo da volta (em segundos): '));
+
+        // Validação simples do tempo
+        if (!isNaN(tempo) && tempo > 0) {
+            voltas.push(tempo);
+        } else {
+            console.log('⚠️ Tempo invalido! Volta nao registrada.');
+        }
+
+        continuar = readline.question('Registrar outra volta? (S/N): ').toUpperCase();
+        console.log(''); // Linha em branco para organizar o terminal
+
+    } while (continuar === "S");
+
+    // Processamento e exibição dos resultados
+    if (voltas.length > 0) {
+        let totalTempo = 0;
+        let melhorTempo = voltas[0]; // O menor tempo é o melhor
+        let piorTempo = voltas[0];   // O maior tempo é o pior
+
+        // Loop simples para as estatísticas
+        for (let i = 0; i < voltas.length; i++) {
+            totalTempo += voltas[i];
+
+            if (voltas[i] < melhorTempo) melhorTempo = voltas[i];
+            if (voltas[i] > piorTempo) piorTempo = voltas[i];
+        }
+
+        let media = totalTempo / voltas.length;
+
+        console.log('--- RESUMO DA CORRIDA ---');
+        console.log(`Numero total de voltas: ${voltas.length}`);
+        console.log(`Melhor tempo: ${melhorTempo} segundos`);
+        console.log(`Pior tempo: ${piorTempo} segundos`);
+        console.log(`Tempo medio das voltas: ${media.toFixed(2)} segundos`);
+    } else {
+        console.log('Nenhuma volta foi registrada.');
+    }
+
+    return "Corrida finalizada!";
+}
+
+console.log(registrarVoltas()); */
