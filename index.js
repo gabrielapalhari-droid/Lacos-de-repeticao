@@ -81,7 +81,9 @@ let retirar = Number(readline.question('Escolha uma quantia para sacar: '));
 //console.log(PuxarSaldo()); */
 
 
-//Produtos Fim 
+
+//Produtos Fim - Utilizei IA
+
 
 /* const readline = require('readline-sync'); 
 
@@ -144,7 +146,7 @@ console.log(VerifSenha());
  */
 
 
-//Cadastro de produtos
+//Cadastro de produtos - essa usei a IA
 
 /* const readline = require('readline-sync');
 
@@ -201,7 +203,7 @@ console.log(cadastrarProdutos()); */
 
 
 
-//Voltas 
+//Voltas - essa eu usei IA para fazer 
 
 
 /* const readline = require('readline-sync');
