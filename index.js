@@ -80,7 +80,9 @@ let retirar = Number(readline.question('Escolha uma quantia para sacar: '));
 };
 //console.log(PuxarSaldo()); */
 
+
 //Produtos Fim 
+
 /* const readline = require('readline-sync'); 
 
 let cadastrados = 0, totalEstoque = 0, maiorQtd = 0, maisPreenchido = "";
@@ -106,7 +108,9 @@ console.log(`\nProdutos cadastrados: ${cadastrados}`);
 console.log(`Maior quantidade: ${maisPreenchido} (${maiorQtd} un)`);
 console.log(`Total no estoque: ${totalEstoque}`); */
 
+
 //Senha 
+
 /* const readline = require('readline-sync');
 
 function VerifSenha() {
@@ -140,7 +144,8 @@ console.log(VerifSenha());
  */
 
 
-//Cadastro de produtos 
+//Cadastro de produtos
+
 /* const readline = require('readline-sync');
 
 function cadastrarProdutos() {
@@ -156,7 +161,7 @@ function cadastrarProdutos() {
         if (!isNaN(preco) && preco >= 0) {
             produtos.push({ nome: nome, preco: preco });
         } else {
-            console.log('⚠️ Preco invalido! Produto nao cadastrado.');
+            console.log('Preco invalido! Produto nao cadastrado.');
         }
 
         continuar = readline.question('Deseja cadastrar outro produto? (S/N): ').toUpperCase();
@@ -180,7 +185,7 @@ function cadastrarProdutos() {
 
         let media = total / produtos.length;
 
-        console.log('--- RESUMO ---');
+        console.log('Resumo');
         console.log(`Quantidade de produtos: ${produtos.length}`);
         console.log(`Valor medio: R$ ${media.toFixed(2)}`);
         console.log(`Mais caro: ${maisCaro.nome} (R$ ${maisCaro.preco.toFixed(2)})`);
@@ -194,7 +199,11 @@ function cadastrarProdutos() {
 
 console.log(cadastrarProdutos()); */
 
+
+
 //Voltas 
+
+
 /* const readline = require('readline-sync');
 
 function registrarVoltas() {
@@ -209,7 +218,7 @@ function registrarVoltas() {
         if (!isNaN(tempo) && tempo > 0) {
             voltas.push(tempo);
         } else {
-            console.log('⚠️ Tempo invalido! Volta nao registrada.');
+            console.log('Tempo invalido! Volta nao registrada.');
         }
 
         continuar = readline.question('Registrar outra volta? (S/N): ').toUpperCase();
@@ -233,11 +242,11 @@ function registrarVoltas() {
 
         let media = totalTempo / voltas.length;
 
-        console.log('--- RESUMO DA CORRIDA ---');
-        console.log(`Numero total de voltas: ${voltas.length}`);
+        console.log('Resumo final');
+        console.log(`Numero de voltas: ${voltas.length}`);
         console.log(`Melhor tempo: ${melhorTempo} segundos`);
         console.log(`Pior tempo: ${piorTempo} segundos`);
-        console.log(`Tempo medio das voltas: ${media.toFixed(2)} segundos`);
+        console.log(`Tempo medio: ${media.toFixed(2)} segundos`);
     } else {
         console.log('Nenhuma volta foi registrada.');
     }
